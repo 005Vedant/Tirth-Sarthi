@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tirth Sarthi - Smart Temple & Pilgrimage Management</title>
+    <meta name="description" content="Smart technology for seamless pilgrimage experience at Gujarat's major temples - Somnath, Dwarka, Ambaji, and Pavagadh. AI-powered crowd management, smart queues, and online booking." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="standalone.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <div class="logo">
+                    <span>ॐ</span>
+                </div>
+                <span class="brand-name">Tirth Sarthi</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#temples" class="nav-link">Temples</a>
+                <a href="#devotees" class="nav-link">For Devotees</a>
+                <a href="#authorities" class="nav-link">For Authorities</a>
+                <a href="#about" class="nav-link">About</a>
+                <button class="btn btn-hero btn-sm" onclick="scrollToSection('contact')">Get Started</button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav hidden" id="mobileNav">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#features" class="mobile-nav-link">Features</a>
+            <a href="#temples" class="mobile-nav-link">Temples</a>
+            <a href="#devotees" class="mobile-nav-link">For Devotees</a>
+            <a href="#authorities" class="mobile-nav-link">For Authorities</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <button class="btn btn-hero" onclick="scrollToSection('contact')">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="mandala-pattern"></div>
+        
+        <div class="container hero-content">
+            <div class="hero-inner">
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3 7h7l-5.5 4.5L19 21l-7-5-7 5 2.5-7.5L2 9h7z"/>
+                    </svg>
+                    <span>Smart India Hackathon 2025</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Smart Technology for a
+                    <span class="highlight">Seamless Pilgrimage Experience</span>
+                </h1>
+
+                <p class="hero-description">
+                    AI-powered crowd management, smart queues, and seamless darshan at Gujarat's most sacred temples
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-hero btn-lg" onclick="scrollToSection('features')">
+                        Explore Features
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="scrollToSection('temples')">
+                        View Temples
+                    </button>
+                </div>
+
+                <div class="temple-grid">
+                    <div class="temple-card">
+                        <p>Somnath</p>
+                    </div>
+                    <div class="temple-card">
+                        <p>Dwarka</p>
+                    </div>
+                    <div class="temple-card">
+                        <p>Ambaji</p>
+                    </div>
+                    <div class="temple-card">
+                        <p>Pavagadh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-border">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Powerful Features</h2>
+                <p class="section-description">Technology that brings peace and order to your spiritual journey</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 8V4M12 16v-4M8 12H4M20 12h-4M15 9l4-4M5 19l4-4M9 15l-4 4M19 5l-4 4"/>
+                        </svg>
+                    </div>
+                    <h3>AI Crowd Prediction</h3>
+                    <p>Leverages artificial intelligence to predict crowd density and suggest ideal visiting times for a peaceful darshan.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Smart Queue System</h3>
+                    <p>Digitally organizes devotees' entry to reduce physical congestion and minimize waiting time at temple premises.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3>Emergency Management</h3>
+                    <p>Real-time alerts, first aid assistance, and coordination tools ensuring safety during crowded events.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <h3>Traffic Control Integration</h3>
+                    <p>Connects with local traffic systems to streamline access routes and optimize parking management.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3>Online Booking</h3>
+                    <p>Easy ticket and slot booking for darshan, pooja, and temple entry - plan your visit from anywhere.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6m5-13l-5 5m0 6l5 5m-13-11l5 5m6 0l5-5m-16 3h6m6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3>Temple-Specific Customization</h3>
+                    <p>Dedicated modules for each temple while maintaining a unified, seamless user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temples Section -->
+    <section id="temples" class="section temples-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Temple Modules</h2>
+                <p class="section-description">Customized solutions for each sacred destination</p>
+            </div>
+
+            <div class="temples-grid">
+                <div class="temple-module">
+                    <div class="temple-bar bar-orange"></div>
+                    <div class="temple-module-content">
+                        <div class="temple-module-header">
+                            <h3 class="gradient-text">Somnath</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p class="temple-description">The first among the twelve Jyotirlinga shrines of Shiva, located on the western coast of Gujarat.</p>
+                        <div class="temple-highlights">
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>AI Crowd Analysis</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Digital Queue Management</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>24/7 Emergency Response</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-full">View Details</button>
+                    </div>
+                </div>
+
+                <div class="temple-module">
+                    <div class="temple-bar bar-blue"></div>
+                    <div class="temple-module-content">
+                        <div class="temple-module-header">
+                            <h3 class="gradient-text">Dwarka</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p class="temple-description">One of the Char Dham pilgrimage sites, believed to be the ancient kingdom of Lord Krishna.</p>
+                        <div class="temple-highlights">
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Smart Parking System</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Real-time Traffic Updates</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Online Darshan Booking</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-full">View Details</button>
+                    </div>
+                </div>
+
+                <div class="temple-module">
+                    <div class="temple-bar bar-pink"></div>
+                    <div class="temple-module-content">
+                        <div class="temple-module-header">
+                            <h3 class="gradient-text">Ambaji</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p class="temple-description">One of the 51 Shakti Peethas, a revered pilgrimage destination in the Aravalli hills.</p>
+                        <div class="temple-highlights">
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Crowd Density Alerts</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Multi-language Support</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Integrated Safety Measures</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-full">View Details</button>
+                    </div>
+                </div>
+
+                <div class="temple-module">
+                    <div class="temple-bar bar-green"></div>
+                    <div class="temple-module-content">
+                        <div class="temple-module-header">
+                            <h3 class="gradient-text">Pavagadh</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p class="temple-description">A sacred hill temple complex, UNESCO World Heritage Site with historic significance.</p>
+                        <div class="temple-highlights">
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Ropeway Integration</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Weather Updates</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="dot"></div>
+                                <span>Emergency Medical Support</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-full">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Devotees Section -->
+    <section id="devotees" class="section devotees-section">
+        <div class="container">
+            <div class="devotees-grid">
+                <div class="devotees-content">
+                    <h2 class="section-title">For Devotees</h2>
+                    <p class="devotees-intro">
+                        Experience a seamless and stress-free pilgrimage with technology that works for you. 
+                        Tirth Sarthi helps you plan, navigate, and enjoy your spiritual journey with peace of mind.
+                    </p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Plan Your Visit</h3>
+                                <p>Get real-time crowd predictions and choose the best time for a peaceful darshan experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Smart Notifications</h3>
+                                <p>Receive timely alerts about queue status, weather conditions, and temple events.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Easy Navigation</h3>
+                                <p>Access digital maps, parking information, and directions to make your journey smooth.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Spiritual Experience</h3>
+                                <p>Focus on your devotion while we handle the logistics and safety aspects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="devotees-dashboard">
+                    <div class="dashboard-card">
+                        <div class="live-status">
+                            <div class="status-header">
+                                <div class="pulse-dot"></div>
+                                <span>Live Status</span>
+                            </div>
+                            <div class="status-items">
+                                <div class="status-item">
+                                    <span>Current Wait Time</span>
+                                    <span class="status-value primary">15 mins</span>
+                                </div>
+                                <div class="status-item">
+                                    <span>Crowd Level</span>
+                                    <span class="status-value success">Low</span>
+                                </div>
+                                <div class="status-item">
+                                    <span>Best Time Today</span>
+                                    <span class="status-value">6:00 AM - 8:00 AM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <p class="stat-number">500+</p>
+                                <p class="stat-label">Devotees Helped Daily</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-number">95%</p>
+                                <p class="stat-label">Satisfaction Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Authorities Section -->
+    <section id="authorities" class="section authorities-section">
+        <div class="container">
+            <div class="authorities-grid">
+                <div class="authorities-dashboard">
+                    <div class="management-card">
+                        <h3>Management Dashboard</h3>
+                        <div class="dashboard-items">
+                            <div class="dashboard-metric">
+                                <div class="metric-header">
+                                    <span>Daily Visitors</span>
+                                    <span class="metric-value">12,450</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-metric">
+                                <div class="metric-header">
+                                    <span>Queue Efficiency</span>
+                                    <span class="metric-value">94%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 94%"></div>
+                                </div>
+                            </div>
+
+                            <div class="metric-grid">
+                                <div class="metric-box">
+                                    <p class="box-value">24/7</p>
+                                    <p class="box-label">Monitoring</p>
+                                </div>
+                                <div class="metric-box">
+                                    <p class="box-value">4</p>
+                                    <p class="box-label">Temples</p>
+                                </div>
+                                <div class="metric-box">
+                                    <p class="box-value">Zero</p>
+                                    <p class="box-label">Incidents</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="authorities-content">
+                    <h2 class="section-title">For Temple Authorities</h2>
+                    <p class="authorities-intro">
+                        Efficient tools and dashboards that make managing large crowds and emergencies seamless. 
+                        Make data-driven decisions to enhance safety and devotee satisfaction.
+                    </p>
+                    <div class="capabilities-list">
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="20" x2="12" y2="10"></line>
+                                    <line x1="18" y1="20" x2="18" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="16"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Real-time Analytics</h3>
+                                <p>Comprehensive dashboards showing crowd patterns, peak hours, and visitor demographics.</p>
+                            </div>
+                        </div>
+
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Security Management</h3>
+                                <p>Integrated emergency alerts, incident reporting, and coordination with security forces.</p>
+                            </div>
+                        </div>
+
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="12" r="1"></circle>
+                                    <circle cx="15" cy="12" r="1"></circle>
+                                    <path d="M8 20l4-9 4 9"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Communication Hub</h3>
+                                <p>Centralized system for announcements, staff coordination, and visitor assistance.</p>
+                            </div>
+                        </div>
+
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Data-Driven Insights</h3>
+                                <p>Historical data analysis to optimize operations and improve visitor experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-header">
+                    <div class="sih-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <span>Smart India Hackathon 2025</span>
+                    </div>
+                    <h2 class="section-title">About Tirth Sarthi</h2>
+                    <p class="about-intro">
+                        Tirth Sarthi is our innovative solution for the Smart India Hackathon 2025, 
+                        addressing the critical challenge of Temple & Pilgrimage Crowd Management 
+                        at four of Gujarat's most revered shrines.
+                    </p>
+                </div>
+
+                <div class="mission-vision">
+                    <div class="mv-card">
+                        <div class="mv-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To blend spirituality with technology, ensuring every devotee experiences 
+                            a safe, organized, and peaceful pilgrimage while helping temple authorities 
+                            manage crowds efficiently.
+                        </p>
+                    </div>
+
+                    <div class="mv-card">
+                        <div class="mv-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>
+                            To become the standard for smart pilgrimage management across India, 
+                            creating a harmonious balance between devotion and modern technology 
+                            for millions of pilgrims.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <div class="challenge-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>The Challenge</h3>
+                            <p>
+                                Gujarat's major temples - Somnath, Dwarka, Ambaji, and Pavagadh - attract millions 
+                                of devotees annually. Managing such large crowds while ensuring safety, accessibility, 
+                                and a peaceful spiritual experience is a complex challenge.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="solution-list">
+                        <h4>Our Solution Includes:</h4>
+                        <div class="solution-grid">
+                            <div class="solution-item">
+                                <div class="dot"></div>
+                                <span>AI-powered crowd prediction algorithms</span>
+                            </div>
+                            <div class="solution-item">
+                                <div class="dot"></div>
+                                <span>Digital queue management system</span>
+                            </div>
+                            <div class="solution-item">
+                                <div class="dot"></div>
+                                <span>Real-time emergency response coordination</span>
+                            </div>
+                            <div class="solution-item">
+                                <div class="dot"></div>
+                                <span>Integrated traffic and parking solutions</span>
+                            </div>
+                            <div class="solution-item">
+                                <div class="dot"></div>
+                                <span>Multi-language support for diverse devotees</span>
+                            </div>
+                            <div class="solution-item">
+                                <div class="dot"></div>
+                                <span>Temple-specific customizable dashboards</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">Have questions or want to partner with us? We'd love to hear from you.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="info-label">Email</p>
+                                <p class="info-value">info@tirthsarthi.in</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="info-label">Phone</p>
+                                <p class="info-value">+91 XXXX XXXXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="info-label">Location</p>
+                                <p class="info-value">Gujarat, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-theme-card">
+                        <h4>Project Theme</h4>
+                        <p>Temple & Pilgrimage Crowd Management</p>
+                        <div class="theme-temples">
+                            <div class="theme-temple">
+                                <div class="dot"></div>
+                                <span>Somnath Temple</span>
+                            </div>
+                            <div class="theme-temple">
+                                <div class="dot"></div>
+                                <span>Dwarka Temple</span>
+                            </div>
+                            <div class="theme-temple">
+                                <div class="dot"></div>
+                                <span>Ambaji Temple</span>
+                            </div>
+                            <div class="theme-temple">
+                                <div class="dot"></div>
+                                <span>Pavagadh Temple</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell us more about your inquiry..." rows="6"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-hero btn-lg btn-full">
+                            Send Message
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <span>ॐ</span>
+                        </div>
+                        <span class="brand-name">Tirth Sarthi</span>
+                    </div>
+                    <p>
+                        Smart technology for seamless pilgrimage experiences. Bringing peace and order 
+                        to your spiritual journey through innovative crowd management solutions.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#temples">Temples</a></li>
+                        <li><a href="#devotees">For Devotees</a></li>
+                        <li><a href="#authorities">For Authorities</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    Made with 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    for <strong>Smart India Hackathon 2025</strong>
+                </p>
+                <p>© 2025 Tirth Sarthi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <strong id="toastTitle"></strong>
+            <p id="toastMessage"></p>
+        </div>
+    </div>
+
+    <script src="standalone.js"></script>
+</body>
+</html>
